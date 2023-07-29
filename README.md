@@ -3,14 +3,13 @@ A quick and dirty script to iterate over the spotify liked songs and love them o
 
 # Install
 Required for this script to work are the following python libraries:
-- dotenv (probably preinstalled)
 - pylast
 - os (probably preinstalled)
 - spotipy
 
 Install these using the following command:
 ```
-pip install dotenv pylast os spotipy
+pip install pylast os spotipy
 ```
 
 # Run
