@@ -21,6 +21,16 @@ For LastFM, get a developer account [here](https://www.last.fm/api/account/creat
 ### 2. Spotify
 For Spotify head over to the [developer dashboard](https://developer.spotify.com/dashboard) and create a new app. as the redirect URI input `http://localhost:42010` (or a custom one and change it in the python code) and after creation, insert the key and secret into the dedicated fields in the python file.
 
+#### Example
+```
+LASTFM_KEY = "aCDwi6Jvu5LrYrwQ248cxUJwjSqS3Y"
+LASTFM_SECRET = "xKBYQCrz9yav3Yo9ncAQS2mahELgH3"
+SPOTIFY_KEY = "48iTEzmsvNg8H33ccyyKRB786ZM5Di"
+SPOTIFY_SECRET = "Diusmu8mefab5CXx5ttSpjoFj3nZFS"
+
+SPOTIFY_REDIRECT_URI="http://localhost:42010"
+```
+
 # Notice
 - The more liked songs in Spotify, the longer it takes (Took about 15mins for rougly 2500 songs for me)
 - Unknown songs are skipped and there's no way for me to detect it.
