@@ -38,3 +38,4 @@ Verbose logging is enabled by default with the `VERBOSE` boolean constant. Setti
 - The more liked songs in Spotify, the longer it takes (Took about 15mins for rougly 2500 songs for me)
 - Unknown songs are skipped and there's no way for me to detect it.
 - This script likely only works with a Spotify PREMIUM account
+- The script works from the most recent liked song downwards
