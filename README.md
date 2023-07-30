@@ -21,6 +21,9 @@ For LastFM, get a developer account [here](https://www.last.fm/api/account/creat
 ### 2. Spotify
 For Spotify head over to the [developer dashboard](https://developer.spotify.com/dashboard) and create a new app. as the redirect URI input `http://localhost:42010` (or a custom one and change it in the python code) and after creation, insert the key and secret into the dedicated fields in the python file.
 
+### 3. Verbose logging
+Verbose logging is enabled by default with the `VERBOSE` boolean constant. Setting it to false will stop printing anything to the console which might reduce runtime. Depending on the size of the liked songs playlist on Spotify the impact this has, may be noticable (very unlikely).
+
 # Notice
 - The more liked songs in Spotify, the longer it takes (Took about 15mins for rougly 2500 songs for me)
 - Unknown songs are skipped and there's no way for me to detect it.
