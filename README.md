@@ -21,6 +21,16 @@ For LastFM, get a developer account [here](https://www.last.fm/api/account/creat
 ### 2. Spotify
 For Spotify head over to the [developer dashboard](https://developer.spotify.com/dashboard) and create a new app. as the redirect URI input `http://localhost:42010` (or a custom one and change it in the python code) and after creation, insert the key and secret into the dedicated fields in the python file.
 
+#### Example
+```
+LASTFM_KEY = "aCDwi6Jvu5LrYrwQ248cxUJwjSqS3Y"
+LASTFM_SECRET = "xKBYQCrz9yav3Yo9ncAQS2mahELgH3"
+SPOTIFY_KEY = "48iTEzmsvNg8H33ccyyKRB786ZM5Di"
+SPOTIFY_SECRET = "Diusmu8mefab5CXx5ttSpjoFj3nZFS"
+
+SPOTIFY_REDIRECT_URI="http://localhost:42010"
+```
+
 ### 3. Verbose logging
 Verbose logging is enabled by default with the `VERBOSE` boolean constant. Setting it to false will stop printing anything to the console which might reduce runtime. Depending on the size of the liked songs playlist on Spotify the impact this has, may be noticable (very unlikely).
 
