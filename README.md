@@ -1,7 +1,7 @@
 # LastLovedSyncify
 A quick and dirty script to iterate over the spotify liked songs and love them on lastfm
 
-# Install
+## Install
 Required for this script to work are the following python libraries:
 - pylast
 - os (probably preinstalled)
@@ -12,7 +12,7 @@ Install these using the following command:
 pip install pylast os spotipy
 ```
 
-# Run
+## Run
 Make sure to insert your api keys and secrets into the variable fields at the top of the python file
 
 ### 1. Last.fm
@@ -34,7 +34,7 @@ SPOTIFY_REDIRECT_URI="http://localhost:42010"
 ### 3. Verbose logging
 Verbose logging is enabled by default with the `VERBOSE` boolean constant. Setting it to false will stop printing anything to the console which might reduce runtime. Depending on the size of the liked songs playlist on Spotify the impact this has, may be noticable (very unlikely).
 
-# Notice
+## Notice
 - The more liked songs in Spotify, the longer it takes (Took about 15mins for rougly 2500 songs for me)
 - Unknown songs are skipped and there's no way for me to detect it.
 - This script likely only works with a Spotify PREMIUM account
