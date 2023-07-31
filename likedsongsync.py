@@ -51,7 +51,7 @@ def show_tracks(results):
     for item in results['items']:
         track = item['track']
         tracknr+=1
-        verboseprint("%10s %13s" % (f"ETA:{round((((int(results['total'])-tracknr)*0.25)/60))}min", f"[{tracknr}/{int(results['total'])}]") + "%32.32s %s" % (track['artists'][0]['name'], track['name']))
+        verboseprint("%-10s %13s" % (f"ETA:{round((((int(results['total'])-tracknr)*0.25)/60))}min", f"[{tracknr}/{int(results['total'])}]") + "%32.32s %s" % (track['artists'][0]['name'], track['name']))
         track = network.get_track(track['artists'][0]['name'], track['name'])
         track.love()
 
