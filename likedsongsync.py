@@ -46,12 +46,12 @@ def spotifyauth():
                                         client_secret=SPOTIFY_SECRET,
                                         redirect_uri="http://localhost:42010",
                                         scope="user-library-read"))
-
-
 def show_tracks(results):
+    tracknr = results['offset']
     for item in results['items']:
         track = item['track']
-        verboseprint("%32.32s %s" % (track['artists'][0]['name'], track['name']))
+        tracknr+=1
+        verboseprint(f"ETA:{round((((int(results['total'])-tracknr)*0.25)/60))}min [{tracknr}/{int(results['total'])}]" + "%32.32s %s" % (track['artists'][0]['name'], track['name']))
         track = network.get_track(track['artists'][0]['name'], track['name'])
         track.love()
 
