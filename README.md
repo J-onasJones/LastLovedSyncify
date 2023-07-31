@@ -42,7 +42,7 @@ ETA:0min     [2592/2596]               Another-Artist-69 Some-Other-Song-420
 ```
 
 ## Notice
-- The more liked songs in Spotify, the longer it takes (Took about 15mins for rougly 2500 songs for me)
+- The more liked songs in Spotify, the longer it takes (Took about 10mins for rougly 2600 songs for me)
 - Unknown songs are skipped and there's no way for me to detect it.
 - This script likely only works with a Spotify PREMIUM account
 - The script works from the most recent liked song downwards
