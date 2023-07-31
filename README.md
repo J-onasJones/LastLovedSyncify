@@ -8,7 +8,7 @@ Required for this script to work are the following python libraries:
 - spotipy
 
 Install these using the following command:
-```
+```sh
 pip install pylast os spotipy
 ```
 
@@ -35,7 +35,7 @@ SPOTIFY_REDIRECT_URI="http://localhost:42010"
 Verbose logging is enabled by default with the `VERBOSE` boolean constant. Setting it to false will stop printing anything to the console which might reduce runtime. Depending on the size of the liked songs playlist on Spotify the impact this has, may be noticable (very unlikely).
 
 #### Example
-```
+```sh
 ETA:1min     [2591/2596]                        Artist-1 Song-1
 ETA:0min     [2592/2596]               Another-Artist-69 Some-Other-Song-420
 ```
