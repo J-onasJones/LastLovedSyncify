@@ -1,4 +1,5 @@
 <script>
+
     import { goto } from '$app/navigation';
   import {getCookie} from '$lib/cookieUtils.js';
   
@@ -14,7 +15,10 @@
     let currentPage = 1;
     let totalItems = 1;
     export let itemsPerPage = 10;
-    export let items = [];
+    /**
+     * @type {any[]}
+     */
+     export let items = [];
     export let totalPages = Math.ceil(totalItems / itemsPerPage);
     export let fetched = false;
   
@@ -59,7 +63,9 @@
      * @param {string} accessToken
      */
     async function getLikedSongs(accessToken) {
+      // @ts-ignore
       document.getElementById("main").style.display = "none";
+      // @ts-ignore
       document.getElementById("loading").style.display = "block";
       let total = await getLikedLength(accessToken);
       let limit = 50;
@@ -67,7 +73,9 @@
       for (let offset = 0; offset < total; offset += 50) {
         likedSongs = likedSongs.concat(await getnextLikedSongs(accessToken, offset, limit = 50));
       }
+      // @ts-ignore
       document.getElementById("loading").style.display = "none";
+      // @ts-ignore
       document.getElementById("main").style.display = "block";
       refreshItems(1);
       fetched = true;
@@ -98,16 +106,25 @@
       });
   }
 
+  /**
+     * @param {{ target: { value: string | number; }; }} event
+     */
   function changePage(event) {
     currentPage = +event.target.value;
   }
 
+  /**
+     * @param {{ target: { value: string | number; }; }} event
+     */
   function changeItemsPerPage(event) {
     itemsPerPage = +event.target.value;
     currentPage = 1;
     refreshItems(currentPage);
   }
 
+  /**
+     * @param {number} newpage
+     */
   function refreshItems(newpage) {
     currentPage = newpage;
     totalPages = Math.ceil(totalItems / itemsPerPage);
