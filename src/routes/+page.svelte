@@ -2,9 +2,11 @@
 
     import { goto } from '$app/navigation';
   import {getCookie} from '$lib/cookieUtils.js';
+  import { page } from '$app/stores';
   
     const SpotifyclientId = 'd01716d4caf143e28ffce2c0ebab6f4b';
-    const SpotifyRedirectUri = 'http://localhost:5173/spotifycallback';
+    const SpotifyRedirectUri = $page.url + 'spotifycallback';
+    console.log(SpotifyRedirectUri);
     const SpotifyApiScopes = 'user-library-read';
     const LastFmApiKey = '2753b46a0cababd06a7fcb3c5881072a';
     const LastFmRedirectUri = 'http://localhost:5173/lastfmcallback';
